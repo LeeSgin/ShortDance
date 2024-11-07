@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    android:background="#000000"
+    tools:context=".GuideFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="16sp"
+        android:background="@null"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back" />
+
+    <!-- 타이틀 텍스트 -->
+    <TextView
+        android:id="@+id/title_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16sp"
+        android:text="가이드 생성하기"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 설명 텍스트 -->
+    <TextView
+        android:id="@+id/description_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="80dp"
+        android:text="어떤 숏폼 가이드를 만들까요?"
+        android:textColor="@android:color/white"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description_text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="130dp"
+        android:text="만들고 싶은 숏폼 영상의 링크를 아래에 붙여넣으면 \n안무가이드 영상을 만들어 드려요!"
+        android:textColor="@android:color/white"
+        android:textSize="13sp" />
+
+    <!-- 텍스트 입력 필드 -->
+    <EditText
+        android:id="@+id/input_field"
+        android:layout_width="match_parent"
+        android:layout_height="303dp"
+
+        android:layout_marginLeft="16sp"
+        android:layout_marginTop="200dp"
+        android:layout_marginRight="16sp"
+
+        android:background="@drawable/rounded_edit_text"
+        android:gravity="center"
+        android:hint="링크를 여기에 붙여넣기"
+        android:inputType="textMultiLine"
+        android:textColor="@android:color/white"
+        android:textColorHint="#80FFFFFF" />
+
+    <!-- 클립보드 붙여넣기 버튼 -->
+
+    <!-- 다음으로 버튼 -->
+    <android.widget.Button
+        android:id="@+id/paste_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="170sp"
+        android:background="@drawable/gradient_background"
+        android:backgroundTint="#01EEFF"
+        android:text="클립보드에 복사된 링크 붙여넣기"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <android.widget.Button
+        android:id="@+id/next_button"
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal|bottom"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="100dp"
+        android:backgroundTint="#31FF20"
+        android:text="다음으로"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        android:background="@drawable/gradient_background"/>
+
+
+</FrameLayout>

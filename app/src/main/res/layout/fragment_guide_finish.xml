@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GuideFinishFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="16sp"
+        android:background="@null"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back"
+        android:padding="20dp"/>
+
+    <!-- 타이틀 텍스트 -->
+    <TextView
+        android:id="@+id/title_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16sp"
+        android:text="가이드 생성하기"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <!-- 중앙 이미지 -->
+    <ImageView
+        android:id="@+id/guide_image"
+        android:layout_width="match_parent"
+        android:layout_height="556dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        android:src="@drawable/img_background" /> <!-- 여기에 이미지 추가 android:src="@drawable/" -->
+    <!-- 체크 아이콘 -->
+    <ImageView
+        android:id="@+id/check_icon"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_check"/> <!-- 체크 아이콘 -->
+
+    <!-- 완료 텍스트 -->
+    <TextView
+        android:id="@+id/guide_complete_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="80dp"
+        android:gravity="center"
+        android:text="안무 가이드 생성 완료!"
+        android:textColor="#31FF20"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+
+    <!-- 하단 버튼 -->
+    <android.widget.Button
+        android:id="@+id/use_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        android:backgroundTint="#31FF20"
+        android:text="바로 사용하기"
+        android:textColor="@android:color/black"
+        android:textStyle="bold"
+        />
+
+</FrameLayout>

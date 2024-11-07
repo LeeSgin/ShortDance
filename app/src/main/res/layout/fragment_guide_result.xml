@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#000000"
+    tools:context=".GuideResultFragment">
+
+    <VideoView
+        android:id="@+id/user_preview"
+        android:layout_width="match_parent"
+        android:layout_height="250pt"
+        android:layout_gravity="center">
+
+    </VideoView>
+
+    <android.widget.Button
+        android:id="@+id/save_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:layout_margin="16dp"
+        android:backgroundTint="#31FF20"
+        android:text="갤러리에 저장하기"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+</FrameLayout>

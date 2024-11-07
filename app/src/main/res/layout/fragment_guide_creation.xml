@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".GuideCreationFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <!-- 뒤로가기 버튼 -->
+    <ImageButton
+        android:id="@+id/back_button"
+        android:layout_width="36dp"
+        android:layout_height="24dp"
+        android:layout_marginLeft="20sp"
+        android:layout_marginTop="16sp"
+        android:background="@null"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back"
+        android:padding="20dp"/>
+
+    <!-- 타이틀 텍스트 -->
+    <TextView
+        android:id="@+id/title_text1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="16sp"
+        android:text="가이드 생성하기"
+        android:textColor="@android:color/white"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/guide_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="55dp"
+        android:text="가이드를 만들고 있어요. 조금만 기다려 주세요"
+        android:textColor="@android:color/white"
+        android:textSize="13sp"
+        />
+
+    <!-- 광고 이미지 -->
+    <ImageView
+        android:id="@+id/ad_image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_gravity="center"
+        android:scaleType="fitCenter"
+        /> <!-- 여기에 광고 이미지 추가  android:src="@drawable/ad_placeholder" -->
+
+    <!-- 광고 텍스트 -->
+
+    <!-- 하단 진행바와 텍스트 -->
+    <TextView
+        android:id="@+id/ad_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="330dp"
+        android:background="#99000000"
+        android:padding="8dp"
+        android:text="광고"
+        android:textColor="@android:color/white"
+        android:textSize="20sp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_gravity="bottom"
+        android:padding="16dp">
+
+        <!-- 남은 시간 텍스트 -->
+        <TextView
+            android:id="@+id/time_remaining"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="남은 예상 시간 12초..."
+            android:textColor="@android:color/white"
+            android:textSize="14sp"
+            android:layout_gravity="start" />
+
+        <!-- 진행바 -->
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="10dp"
+            android:layout_marginTop="8dp"
+            android:progress="48"
+            android:progressTint="#31FF20" />
+    </LinearLayout>
+</FrameLayout>
