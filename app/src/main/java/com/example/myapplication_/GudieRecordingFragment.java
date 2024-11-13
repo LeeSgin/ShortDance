@@ -109,7 +109,7 @@ public class GudieRecordingFragment extends Fragment {
                 }
                 Log.d("VideoView", "Current playback position after seek: " + videoView.getCurrentPosition() + "ms");
 //                videoView.pause();
-                videoView.setZOrderOnTop(true);
+                //videoView.setZOrderOnTop(true);
             });
         } else {
             Toast.makeText(getActivity(), "Invalid video source.", Toast.LENGTH_LONG).show();
