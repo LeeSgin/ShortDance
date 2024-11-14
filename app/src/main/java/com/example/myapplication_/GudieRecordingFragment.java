@@ -80,6 +80,9 @@ public class GudieRecordingFragment extends Fragment {
         cameraExecutor = Executors.newSingleThreadExecutor();
         countdownText = view.findViewById(R.id.countdown_text); // 카운트다운 텍스트 뷰 초기화
 
+        PreviewView previewView = view.findViewById(R.id.preview_view);
+        previewView.setImplementationMode(PreviewView.ImplementationMode.COMPATIBLE);
+
         ImageButton backButton = view.findViewById(R.id.back_button);
         backButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
@@ -103,7 +106,7 @@ public class GudieRecordingFragment extends Fragment {
             videoView.setVideoURI(baseVideoUri);
             videoView.setOnPreparedListener(mediaPlayer -> {
                 if (startFromTenSeconds) {
-                    videoView.seekTo(14000); // 10초부터 재생
+                    videoView.seekTo(11000); // 10초부터 재생
                 } else {
                     videoView.seekTo(0); // 0초부터 재생
                 }
@@ -329,7 +332,7 @@ public class GudieRecordingFragment extends Fragment {
         if (currentRecording != null && isRecording) {
             currentRecording.stop(); // 녹화 중지
             isRecording = false; // 녹화 상태 업데이트
-            //Toast.makeText(getContext(), "Recording stopped.", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getContext(), "Recording stopped.", Toast.LENGTH_SHORT).show();
             Log.d("Recording", "Recording stopped."); // 디버그 메시지
             currentRecording = null; // 현재 녹화 상태 초기화
 
