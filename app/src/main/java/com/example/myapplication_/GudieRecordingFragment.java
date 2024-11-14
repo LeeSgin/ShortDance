@@ -106,7 +106,7 @@ public class GudieRecordingFragment extends Fragment {
             videoView.setVideoURI(baseVideoUri);
             videoView.setOnPreparedListener(mediaPlayer -> {
                 if (startFromTenSeconds) {
-                    videoView.seekTo(11000); // 10초부터 재생
+                    videoView.seekTo(14000); // 10초부터 재생
                 } else {
                     videoView.seekTo(0); // 0초부터 재생
                 }
