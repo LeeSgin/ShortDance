@@ -49,4 +49,8 @@ dependencies {
     implementation ("androidx.camera:camera-lifecycle:1.1.0")
     implementation ("androidx.camera:camera-view:1.1.0")
     implementation ("androidx.camera:camera-extensions:1.1.0")
+
+    //미디어파이프
+    implementation ("com.google.mediapipe:solution-core:latest.release")
+    implementation ("com.google.mediapipe:tasks-vision:latest.release")
 }

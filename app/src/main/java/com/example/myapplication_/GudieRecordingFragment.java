@@ -41,6 +41,8 @@ import java.util.concurrent.Executors;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.google.mediapipe.tasks.vision.poselandmarker.PoseLandmarker;
+import com.google.mediapipe.tasks.vision.poselandmarker.PoseLandmarkerResult;
 
 public class GudieRecordingFragment extends Fragment {
 
