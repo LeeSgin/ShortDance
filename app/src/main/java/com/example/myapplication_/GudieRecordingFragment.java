@@ -41,6 +41,8 @@ import java.util.concurrent.Executors;
 import android.os.Handler;
 import android.os.Looper;
 
+import com.google.mediapipe.tasks.vision.core.RunningMode;
+
 public class GudieRecordingFragment extends Fragment {
 
     private static final int REQUEST_PERMISSIONS_CODE = 10;
@@ -92,8 +94,8 @@ public class GudieRecordingFragment extends Fragment {
         videoView.setMediaController(new MediaController(getActivity())); // 비디오 컨트롤러 설정
 
 
-        View redOverlay = view.findViewById(R.id.red_overlay);  // 빨간색 효과를 위한 오버레이 뷰
-        redOverlay.setVisibility(View.GONE);  // 초기에는 숨김
+/*        View redOverlay = view.findViewById(R.id.red_overlay);  // 빨간색 효과를 위한 오버레이 뷰
+        redOverlay.setVisibility(View.GONE);  // 초기에는 숨김*/
 
         Bundle arguments = getArguments();
 
@@ -255,28 +257,28 @@ public class GudieRecordingFragment extends Fragment {
                             Toast.makeText(getContext(), "Recording started.", Toast.LENGTH_SHORT).show();
 
 
-                            // 12초 후 빨간색 오버레이를 보여주기 위한 타이머 설정
-                            if (mistake) {
-                                redOverlayRunnable = () -> {
-                                    View redOverlay = getView().findViewById(R.id.red_overlay);
-                                    redOverlay.setVisibility(View.VISIBLE);
-                                    ObjectAnimator fadeInAnimator = ObjectAnimator.ofFloat(redOverlay, "alpha", 0f, 1f);
-                                    fadeInAnimator.setDuration(1000);
-                                    fadeInAnimator.start();
-
-                                    //Toast.makeText(getContext(), "12초 후 빨간색 표시", Toast.LENGTH_LONG).show();
-
-                                    // 1초 후 오버레이 사라지기
-                                    handler.postDelayed(() -> {
-                                        ObjectAnimator fadeOutAnimator = ObjectAnimator.ofFloat(redOverlay, "alpha", 1f, 0f);
-                                        fadeOutAnimator.setDuration(1000);
-                                        fadeOutAnimator.start();
-                                        stopRecording();
-                                        startSecondRecording(); // 빨간색 오버레이 후 새로운 녹화 시작
-                                    }, 1000);
-                                };
-                                handler.postDelayed(redOverlayRunnable, 12000);
-                            } // 10초 후 실행
+//                            // 12초 후 빨간색 오버레이를 보여주기 위한 타이머 설정
+//                            if (mistake) {
+//                                redOverlayRunnable = () -> {
+//                                    View redOverlay = getView().findViewById(R.id.red_overlay);
+//                                    redOverlay.setVisibility(View.VISIBLE);
+//                                    ObjectAnimator fadeInAnimator = ObjectAnimator.ofFloat(redOverlay, "alpha", 0f, 1f);
+//                                    fadeInAnimator.setDuration(1000);
+//                                    fadeInAnimator.start();
+//
+//                                    //Toast.makeText(getContext(), "12초 후 빨간색 표시", Toast.LENGTH_LONG).show();
+//
+//                                    // 1초 후 오버레이 사라지기
+//                                    handler.postDelayed(() -> {
+//                                        ObjectAnimator fadeOutAnimator = ObjectAnimator.ofFloat(redOverlay, "alpha", 1f, 0f);
+//                                        fadeOutAnimator.setDuration(1000);
+//                                        fadeOutAnimator.start();
+//                                        stopRecording();
+//                                        startSecondRecording(); // 빨간색 오버레이 후 새로운 녹화 시작
+//                                    }, 1000);
+//                                };
+//                                handler.postDelayed(redOverlayRunnable, 12000);
+//                            } // 10초 후 실행
                         } else if (videoRecordEvent instanceof VideoRecordEvent.Finalize) {
                             isRecording = false; // 녹화 중지 상태로 설정
                             Log.d("Recording", "Recording finalized."); // 디버그 메시지
