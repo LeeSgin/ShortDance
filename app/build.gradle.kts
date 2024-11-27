@@ -51,7 +51,6 @@ dependencies {
     implementation ("androidx.camera:camera-extensions:1.1.0")
 
     //미디어파이프
-    implementation ("com.google.mediapipe:solution-core:0.10.18")
-    implementation ("com.google.mediapipe:tasks-vision:0.10.18")
-    implementation ("com.google.mediapipe:tasks-core:0.20230731")
+    implementation ("com.google.mediapipe:tasks-vision:latest.release")
+    implementation ("org.tensorflow:tensorflow-lite:2.7.0")
 }
