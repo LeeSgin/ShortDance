@@ -31,6 +31,7 @@ public class GuideFragment extends Fragment {
         inputField = view.findViewById(R.id.input_field);
         ImageButton backButton = view.findViewById(R.id.back_button);
         Button nextButton = view.findViewById(R.id.next_button);
+        Button pasteButton = view.findViewById(R.id.paste_button);
 
         // 뒤로가기 버튼 클릭 리스너 설정
         backButton.setOnClickListener(new View.OnClickListener() {
@@ -70,6 +71,14 @@ public class GuideFragment extends Fragment {
 
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
                 navController.navigate(R.id.action_guideFragment_to_gudieRecordingFragment, bundle);
+            }
+        });
+
+        pasteButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
+                navController.navigate(R.id.action_guideFragment_to_cameraFragment);
             }
         });
 

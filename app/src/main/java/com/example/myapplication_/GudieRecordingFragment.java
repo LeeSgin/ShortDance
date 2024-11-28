@@ -232,6 +232,7 @@ public class GudieRecordingFragment extends Fragment {
             if (allPermissionsGranted) {
                 startRecording();  // 모든 권한이 승인된 후 녹화 시작
                 Log.d("Permissions", "All permissions granted."); // 권한 허용 로그
+                Log.d("Permissions", "All permissions granted."); // 권한 허용 로그
             } else {
                 Toast.makeText(getContext(), "Please enable all permissions in app settings.", Toast.LENGTH_SHORT).show();
                 Log.d("Permissions", "Not all permissions granted.");

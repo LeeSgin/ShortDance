@@ -5,7 +5,7 @@ plugins {
 
 android {
     namespace = "com.example.myapplication_"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "com.example.myapplication_"
@@ -61,7 +61,5 @@ dependencies {
     implementation ("androidx.camera:camera-extensions:1.1.0")
 
     //미디어파이프
-    implementation ("com.google.mediapipe:solution-core:0.10.18")
     implementation ("com.google.mediapipe:tasks-vision:0.10.18")
-    implementation ("com.google.mediapipe:tasks-core:0.20230731")
 }

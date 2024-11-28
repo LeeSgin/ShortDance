@@ -22,6 +22,9 @@
         <action
             android:id="@+id/action_guideFragment_to_gudieRecordingFragment"
             app:destination="@id/gudieRecordingFragment" />
+        <action
+            android:id="@+id/action_guideFragment_to_cameraFragment"
+            app:destination="@+id/cameraFragment" />
     </fragment>
 
     <fragment
@@ -69,5 +72,12 @@
         <action
             android:id="@+id/action_guideFeedbackFragment_to_gudieRecordingFragment"
             app:destination="@id/gudieRecordingFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.example.myapplication_.CameraFragment"
+        android:label="fragment_camera"
+        tools:layout="@layout/fragment_camera">
     </fragment>
 </navigation>
