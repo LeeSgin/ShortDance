@@ -45,36 +45,21 @@ public class GuideFragment extends Fragment {
 //        nextButton.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
-//                // EditText에서 링크 가져오기
-//                String videoLink = inputField.getText().toString();
+//                // 기본 비디오 URI 설정 (로컬 리소스 또는 HTTP)
+//                String defaultVideoUri = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.ex;  // 로컬 리소스
+//                // 또는 기본 HTTP 영상 URL 사용
+//                // String defaultVideoUri = "http://example.com/sample.mp4";
 //
-//                // NavController를 사용하여 프래그먼트 간 이동
 //                Bundle bundle = new Bundle();
-//                bundle.putString("videoUri", videoLink);  // 입력한 링크를 Bundle에 추가
+//                bundle.putString("videoUri", defaultVideoUri);
+//                bundle.putBoolean("startFromTenSeconds", false);
 //
 //                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-//                navController.navigate(R.id.action_guideFragment_to_gudieRecordingFragment, bundle);  // 전달한 데이터와 함께 이동
+//                navController.navigate(R.id.action_guideFragment_to_gudieRecordingFragment, bundle);
 //            }
 //        });
 
         nextButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                // 기본 비디오 URI 설정 (로컬 리소스 또는 HTTP)
-                String defaultVideoUri = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.ex;  // 로컬 리소스
-                // 또는 기본 HTTP 영상 URL 사용
-                // String defaultVideoUri = "http://example.com/sample.mp4";
-
-                Bundle bundle = new Bundle();
-                bundle.putString("videoUri", defaultVideoUri);
-                bundle.putBoolean("startFromTenSeconds", false);
-
-                NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                navController.navigate(R.id.action_guideFragment_to_gudieRecordingFragment, bundle);
-            }
-        });
-
-        pasteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 

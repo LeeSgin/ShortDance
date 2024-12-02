@@ -72,6 +72,9 @@
         <action
             android:id="@+id/action_guideFeedbackFragment_to_gudieRecordingFragment"
             app:destination="@id/gudieRecordingFragment" />
+        <action
+            android:id="@+id/action_guideFeedbackFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
     </fragment>
 
     <fragment
@@ -80,7 +83,7 @@
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera">
         <action
-            android:id="@+id/action_cameraFragment_to_guide_result_Fragment"
-            app:destination="@id/guide_result_Fragment" />
+            android:id="@+id/action_cameraFragment_to_guideFeedbackFragment"
+            app:destination="@id/guideFeedbackFragment" />
     </fragment>
 </navigation>

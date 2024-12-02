@@ -398,7 +398,8 @@ class CameraFragment : Fragment(), PoseLandmarkerHelper.LandmarkerListener {
                         // 여기서 두 영상을 사용할 수 있도록 Bundle로 전달
                         val bundle = Bundle()
                         if (videoUri != null) {
-                            bundle.putString("videoFilePath", videoUri.toString())
+                            bundle.putString("videoUri", baseVideoUri.toString())
+                            bundle.putString("secondVideoUri", videoUri.toString())
                         } else {
                             Log.e("CameraFragment", "videoUri is null. Cannot navigate.")
                             return@start // 강제 종료 방지
@@ -408,7 +409,7 @@ class CameraFragment : Fragment(), PoseLandmarkerHelper.LandmarkerListener {
                         // 다음 프래그먼트로 전환
                         val navController = findNavController(requireActivity(), R.id.nav_host_fragment)
                         navController.navigate(
-                            R.id.action_cameraFragment_to_guide_result_Fragment,
+                            R.id.action_cameraFragment_to_guideFeedbackFragment,
                             bundle
                         ) // 다음 화면으로 이동하며 Bundle 전달
 

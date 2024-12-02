@@ -69,7 +69,7 @@ public class GuideFeedbackFragment extends Fragment {
         Button restartButton = view.findViewById(R.id.restart_button);
         restartButton.setOnClickListener(v -> {
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-            navController.navigate(R.id.action_guideFeedbackFragment_to_gudieRecordingFragment);
+            navController.navigate(R.id.action_guideFeedbackFragment_to_cameraFragment);
         });
         Button rerepracticeButton = view.findViewById(R.id.repractice_button);
         rerepracticeButton.setOnClickListener(v -> {
@@ -80,7 +80,7 @@ public class GuideFeedbackFragment extends Fragment {
             bundle.putBoolean("startFromTenSeconds", true); // 10초에서 시작
 
             NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-            navController.navigate(R.id.action_guideFeedbackFragment_to_gudieRecordingFragment, bundle); // 프래그먼트 이동
+            navController.navigate(R.id.action_guideFeedbackFragment_to_cameraFragment, bundle); // 프래그먼트 이동
         });
 
         return view;
