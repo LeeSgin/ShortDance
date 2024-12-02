@@ -77,8 +77,17 @@ public class GuideFragment extends Fragment {
         pasteButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
+                String defaultVideoUri = "android.resource://" + getActivity().getPackageName() + "/" + R.raw.ex;  // 로컬 리소스
+                // 또는 기본 HTTP 영상 URL 사용
+                // String defaultVideoUri = "http://example.com/sample.mp4";
+
+                Bundle bundle = new Bundle();
+                bundle.putString("videoUri", defaultVideoUri);
+                bundle.putBoolean("startFromTenSeconds", false);
+
                 NavController navController = Navigation.findNavController(getActivity(), R.id.nav_host_fragment);
-                navController.navigate(R.id.action_guideFragment_to_cameraFragment);
+                navController.navigate(R.id.action_guideFragment_to_cameraFragment, bundle);
             }
         });
 

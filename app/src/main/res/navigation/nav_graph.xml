@@ -79,5 +79,8 @@
         android:name="com.example.myapplication_.CameraFragment"
         android:label="fragment_camera"
         tools:layout="@layout/fragment_camera">
+        <action
+            android:id="@+id/action_cameraFragment_to_guide_result_Fragment"
+            app:destination="@id/guide_result_Fragment" />
     </fragment>
 </navigation>
